@@ -1,0 +1,157 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s infinite;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    animation: colorChange 2s infinite alternate;
+}
+
+.cell:hover {
+    background-color: #45a5f5;
+    animation: none; /* Disable animation on hover */
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #61dafb;
+    }
+    100% {
+        background-color: #ff9800;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+#players {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+#reset-btn {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-top: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #61dafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cell:hover {
+    background-color: #45a5f5;
+}
+
+#winner-message {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    font-size: 24px;
+}
+
+.winner {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.draw {
+    color: #ff9800;
+    font-weight: bold;
+}

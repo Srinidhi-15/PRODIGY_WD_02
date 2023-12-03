@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+
+    <div id="game-container">
+        <h1><center>Tic Tac Toe</h1>
+        </center>
+        <div class="intro">
+            <p>
+                Welcome to Tic-Tac-Toe! Click on a box to start the game.
+            </p>
+            <h2>Rules and Regulations:</h2>
+            <ul>
+                <li>The game is played on a 3x3 grid.</li>
+                <li>Players take turns marking empty cells with "X" or "O".</li>
+                <li>The first player to get three of their marks in a row wins.</li>
+                <li>If the entire grid is filled without a winner, the game is a draw.</li>
+            </ul>
+        </div>
+
+        <div id="players">
+            <label for="player1">Player 1:  </label>
+            <input type="text" id="player1" placeholder="Enter name">
+            <br> 
+            <label for="player2">Player 2:   </label>
+            <input type="text" id="player2" placeholder="Enter name">
+        </div>
+
+        <button id="reset-btn" onclick="resetGame()">Reset Game</button>
+
+        <div id="winner-message" class="hidden"></div>
+
+        <div id="board">
+            <!-- Game board cells go here -->
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+            <div class="cell" onclick="makeMove(this)"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
